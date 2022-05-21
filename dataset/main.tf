@@ -1,10 +1,10 @@
-#deploy feed menifesto dataset
+#Deploy stationary shop dataset
 
-resource "google_bigquery_dataset" "feed_manifesto" {
-  dataset_id                  = var.feed_manifesto
-  friendly_name               = "Feed Manifesto"
-  description                 = "Feed manifesto dataset"
-  location                    = var.feed_manifesto_location #check the location
+resource "google_bigquery_dataset" "stationary" {
+  dataset_id                  = var.stationary
+  friendly_name               = "stationary"
+  description                 = "Stationary Shop dataset"
+  location                    = var.stationary #check the location
   #default_table_expiration_ms = 3600000
 }
 
