@@ -1,22 +1,22 @@
-#Google cloud prvider
+#Google cloud provider
 
 provider "google" {
-  region = "us-central1"
-  zone   = "us-central1-c"
+  region = var.region
+  zone   = var.zone
   project     = var.project_id
 }
 
 # modules
 module "dataset" {
   source = "./dataset"
-  feed_manifesto_location  = var.feed_manifesto_location
-  feed_manifesto = var.feed_manifesto
+  stationary_DS_location = var.stationary_DS_location
+  stationary = var.stationary
 
 }
 
 module "table" {
   source = "./table"
-  feed_manifesto_id = module.dataset.feed_manifesto_dataset_id
-  tbl_edh_msft = var.tbl_edh_msft
-  tbl_edw_msft = var.tbl_edw_msft
+  stationary_id = module.dataset.stationary_dataset_id
+  tbl_notebook = var.tbl_notebook
+  tbl_pen = var.tbl_pen
 }
