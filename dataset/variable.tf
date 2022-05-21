@@ -1,5 +1,5 @@
-variable "feed_manifesto" {
+variable "stationary" {
 }
 
-variable "feed_manifesto_location" {
+variable "stationary_DS_location" {
 }
